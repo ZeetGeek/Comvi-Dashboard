@@ -1,7 +1,22 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./src/*"],
+
+			// images
+			"@/images/*": ["./public/images/*"],
+
+			// pages
+			"@/pages/*": ["./src/app/*"],
+
+			// components
+			"@/components/*": ["./src/components/*"],
+
+			// styles
+			"@/styles/*": ["./src/styles/*"],
+
+			// data
+			"@/data/*": ["./src/data/*"]
+		}
+	}
 }
