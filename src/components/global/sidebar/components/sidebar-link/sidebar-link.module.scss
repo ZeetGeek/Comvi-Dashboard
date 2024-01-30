@@ -1,0 +1,33 @@
+li {
+	.active {
+		background-color: rgb(255 255 255 / 0.2);
+
+		&:hover {
+			background-color: rgb(255 255 255 / 0.2) !important;
+		}
+	}
+
+	.submenu_active {
+		img {
+			rotate: 180deg;
+		}
+	}
+
+	.submenu_parent_active {
+		a {
+			color: #FEC600 !important;
+			&:hover {
+				color: #FEC600 !important;
+			}
+		}
+	}
+}
+
+.menu_links_wrapper:has(.submenu_parent_active) {
+	button {
+		background-color: rgb(255 255 255 / 0.2);
+		&:hover {
+			background-color: rgb(255 255 255 / 0.2) !important;
+		}
+	}
+}

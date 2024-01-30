@@ -6,6 +6,9 @@
 			// images
 			"@/images/*": ["./public/images/*"],
 
+			// layout
+			"@/layout/*": ["./src/layout/*"],
+
 			// pages
 			"@/pages/*": ["./src/app/*"],
 
