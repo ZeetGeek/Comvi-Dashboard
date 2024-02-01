@@ -10,6 +10,10 @@
 
 // scrollbar  
 
+body::-webkit-scrollbar {
+     display: none;
+}
+
 .scrollbar-hide::-webkit-scrollbar {
      display: none;
 }
@@ -28,7 +32,7 @@ tbody {
           background-color: transparent;
 
           &:hover {
-               background-color: rgb(245 245 245);
+               background-color: rgb(245 245 245 / 1);
           }
      }
 }

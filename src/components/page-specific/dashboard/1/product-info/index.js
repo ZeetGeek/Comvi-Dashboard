@@ -17,6 +17,7 @@ import {
 import ShortingButton from "@/components/global/theme-buttons/shorting-button";
 import Select from "@/components/global/input-fields/select-option/select";
 import Option from "@/components/global/input-fields/select-option/option";
+import Badge from "@/components/global/badge";
 
 // images
 import IncrementIcon from "@/images/components/dashboard/1/icons/increment.svg";
@@ -86,8 +87,9 @@ function ProductInfo() {
                                                        </Th>
                                                   </Tr>
                                              </TableHead>
-                                             <div className="mt-[1rem] h-[268px] bg-red-100 overflow-auto scrollbar-hide" >
-                                                  <TableBody>
+
+                                             <div className="h-[296px] overflow-auto scrollbar-hide flex justify-between">
+                                                  <TableBody className="w-full">
                                                        {top_selling_products.map(
                                                             (item) => (
                                                                  <Tr
@@ -99,7 +101,7 @@ function ProductInfo() {
                                                                       <Td className="w-[340px]">
                                                                            <div className="flex items-center justify-start gap-[0.5rem]">
                                                                                 {/* image */}
-                                                                                <div className="h-[2.5rem] w-[2.5rem] rounded-[0.5rem] bg-red-100 overflow-hidden">
+                                                                                <div className="h-[2.5rem] w-[2.5rem] rounded-[0.5rem] overflow-hidden">
                                                                                      <Image
                                                                                           className="object-cover h-full"
                                                                                           src={
@@ -153,11 +155,18 @@ function ProductInfo() {
                                                                            </span>
                                                                       </Td>
                                                                       <Td className="w-[180px]">
-                                                                           {
-                                                                                item
-                                                                                     .product
-                                                                                     .status
-                                                                           }
+                                                                           {item
+                                                                                .product
+                                                                                .status ===
+                                                                           "in-stock" ? (
+                                                                                <>
+                                                                                     <Badge color="primary-light">In Stock</Badge>
+                                                                                </>
+                                                                           ) : (
+                                                                                <>
+                                                                                     <Badge color="warning">Low Stock</Badge>
+                                                                                </>
+                                                                           )}
                                                                       </Td>
                                                                       <Td className="w-[190px]">
                                                                            <span className="text-button text-dark font-semibold capitalize ">

@@ -1,3 +1,5 @@
+"use client"
+
 // components
 import LayoutBox from "@/components/global/layout/layout-box";
 import LayoutTitle from "@/components/global/layout/layout-title";
@@ -5,7 +7,8 @@ import Select from "@/components/global/input-fields/select-option/select";
 import Option from "@/components/global/input-fields/select-option/option";
 import CategoryInfo from "./components/category-info";
 
-import LineChart from "./chart";
+import SalesLineChart from "./chart/sales-line-chart";
+import SalesCategoryChart from "./chart/sales-pie-chart"
 
 // data
 import { category_info } from "@/data/dashboard/1";
@@ -36,7 +39,7 @@ function SalesInfo() {
 
                               {/* chart */}
                               <div className="mt-[1.375rem]">
-                                   <LineChart />
+                                   <SalesLineChart />
                               </div>
                          </LayoutBox>
                     </div>
@@ -63,7 +66,13 @@ function SalesInfo() {
                               <div className="row items-center mt-[1rem]">
                                    {/* category chart and chart detail */}
                                    <div className="w-1/2">
-                                        <div className="h-[294px] w-[294px] rounded-full bg-secondary/50"></div>
+                                        <div className="relative h-[294px] w-[294px]">
+                                             <SalesCategoryChart />
+
+                                             <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                                  <h3 className="text-dark font-extrabold text-display-1">$6,8K</h3>
+                                             </div>
+                                        </div>
                                    </div>
                                    <div className="w-1/2">
                                         {/* category info */}
