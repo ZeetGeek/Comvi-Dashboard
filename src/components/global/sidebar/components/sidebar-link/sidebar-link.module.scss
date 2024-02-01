@@ -1,33 +1,39 @@
 li {
-	.active {
-		background-color: rgb(255 255 255 / 0.2);
+ 
+     .menu_link {
+          border-left: 4px solid transparent;
+     }
 
-		&:hover {
-			background-color: rgb(255 255 255 / 0.2) !important;
-		}
-	}
+     .active {
+          position: relative;
+          border-left: 4px solid #fec600;
 
-	.submenu_active {
-		img {
-			rotate: 180deg;
-		}
-	}
+          &:hover {
+               background-color: rgb(255 255 255 / 0.2) !important;
+          }
+     }
 
-	.submenu_parent_active {
-		a {
-			color: #FEC600 !important;
-			&:hover {
-				color: #FEC600 !important;
-			}
-		}
-	}
+     .submenu_active {
+          img {
+               rotate: 180deg;
+          }
+     }
+
+     .submenu_parent_active {
+          a {
+               color: #fec600 !important;
+               &:hover {
+                    color: #fec600 !important;
+               }
+          }
+     }
 }
 
 .menu_links_wrapper:has(.submenu_parent_active) {
-	button {
-		background-color: rgb(255 255 255 / 0.2);
-		&:hover {
-			background-color: rgb(255 255 255 / 0.2) !important;
-		}
-	}
+     button {
+          background-color: rgb(255 255 255 / 0.2);
+          &:hover {
+               background-color: rgb(255 255 255 / 0.2) !important;
+          }
+     }
 }
