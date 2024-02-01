@@ -56,9 +56,10 @@ function ProductInfo() {
                                              </Select>
                                         </div>
                                    </div>
+                                   {/* mt-[1rem] h-[301px] overflow-auto scrollbar-hide */}
 
                                    {/* products list */}
-                                   <div className="mt-[1rem] h-[301px] overflow-auto scrollbar-hide">
+                                   <div className="mt-[1rem]">
                                         <Table>
                                              <TableHead>
                                                   <Tr>
@@ -85,98 +86,104 @@ function ProductInfo() {
                                                        </Th>
                                                   </Tr>
                                              </TableHead>
-                                             <TableBody>
-                                                  {top_selling_products.map(
-                                                       (item) => (
-                                                            <Tr key={item.id}>
-                                                                 {/* product image , name and id */}
-                                                                 <Td className="w-[340px]">
-                                                                      <div className="flex items-center justify-start gap-[0.5rem]">
-                                                                           {/* image */}
-                                                                           <div className="h-[2.5rem] w-[2.5rem] rounded-[0.5rem] bg-red-100 overflow-hidden">
-                                                                                <Image
-                                                                                     className="object-cover h-full"
-                                                                                     src={
-                                                                                          item
-                                                                                               .product
-                                                                                               .image
-                                                                                     }
-                                                                                     height={
-                                                                                          40
-                                                                                     }
-                                                                                     width={
-                                                                                          40
-                                                                                     }
-                                                                                     alt={
-                                                                                          item
-                                                                                               .product
-                                                                                               .name
-                                                                                     }
-                                                                                />
-                                                                           </div>
-
-                                                                           {/* product name and id */}
-                                                                           <div>
-                                                                                <h6 className="text-button text-dark font-semibold capitalize ">
-                                                                                     {
-                                                                                          item
-                                                                                               .product
-                                                                                               .name
-                                                                                     }
-                                                                                </h6>
-                                                                                <span className="uppercase text-vsm text-admin font-medium">
-                                                                                     Product
-                                                                                     ID:
-                                                                                     {
-                                                                                          item
-                                                                                               .product
-                                                                                               .product_id
-                                                                                     }
-                                                                                </span>
-                                                                           </div>
-                                                                      </div>
-                                                                 </Td>
-                                                                 <Td className="w-[190px]">
-                                                                      <span className="text-button text-dark font-semibold capitalize ">
-                                                                           $
-                                                                           {
-                                                                                item
-                                                                                     .product
-                                                                                     .price
-                                                                           }
-                                                                      </span>
-                                                                 </Td>
-                                                                 <Td className="w-[180px]">
-                                                                      {
-                                                                           item
-                                                                                .product
-                                                                                .status
+                                             <div className="mt-[1rem] h-[268px] bg-red-100 overflow-auto scrollbar-hide" >
+                                                  <TableBody>
+                                                       {top_selling_products.map(
+                                                            (item) => (
+                                                                 <Tr
+                                                                      key={
+                                                                           item.id
                                                                       }
-                                                                 </Td>
-                                                                 <Td className="w-[190px]">
-                                                                      <span className="text-button text-dark font-semibold capitalize ">
+                                                                 >
+                                                                      {/* product image , name and id */}
+                                                                      <Td className="w-[340px]">
+                                                                           <div className="flex items-center justify-start gap-[0.5rem]">
+                                                                                {/* image */}
+                                                                                <div className="h-[2.5rem] w-[2.5rem] rounded-[0.5rem] bg-red-100 overflow-hidden">
+                                                                                     <Image
+                                                                                          className="object-cover h-full"
+                                                                                          src={
+                                                                                               item
+                                                                                                    .product
+                                                                                                    .image
+                                                                                          }
+                                                                                          height={
+                                                                                               40
+                                                                                          }
+                                                                                          width={
+                                                                                               40
+                                                                                          }
+                                                                                          alt={
+                                                                                               item
+                                                                                                    .product
+                                                                                                    .name
+                                                                                          }
+                                                                                     />
+                                                                                </div>
+
+                                                                                {/* product name and id */}
+                                                                                <div>
+                                                                                     <h6 className="text-button text-dark font-semibold capitalize ">
+                                                                                          {
+                                                                                               item
+                                                                                                    .product
+                                                                                                    .name
+                                                                                          }
+                                                                                     </h6>
+                                                                                     <span className="uppercase text-vsm text-admin font-medium">
+                                                                                          Product
+                                                                                          ID:
+                                                                                          {
+                                                                                               item
+                                                                                                    .product
+                                                                                                    .product_id
+                                                                                          }
+                                                                                     </span>
+                                                                                </div>
+                                                                           </div>
+                                                                      </Td>
+                                                                      <Td className="w-[190px]">
+                                                                           <span className="text-button text-dark font-semibold capitalize ">
+                                                                                $
+                                                                                {
+                                                                                     item
+                                                                                          .product
+                                                                                          .price
+                                                                                }
+                                                                           </span>
+                                                                      </Td>
+                                                                      <Td className="w-[180px]">
                                                                            {
                                                                                 item
                                                                                      .product
-                                                                                     .sold
+                                                                                     .status
                                                                            }
-                                                                           pcs
-                                                                      </span>
-                                                                 </Td>
-                                                                 <Td>
-                                                                      <span className="text-button text-dark font-semibold capitalize ">
-                                                                           $
-                                                                           {
-                                                                                item
-                                                                                     .product
-                                                                                     .total_earning
-                                                                           }
-                                                                      </span>
-                                                                 </Td>
-                                                            </Tr>
-                                                       )
-                                                  )}
-                                             </TableBody>
+                                                                      </Td>
+                                                                      <Td className="w-[190px]">
+                                                                           <span className="text-button text-dark font-semibold capitalize ">
+                                                                                {
+                                                                                     item
+                                                                                          .product
+                                                                                          .sold
+                                                                                }
+                                                                                pcs
+                                                                           </span>
+                                                                      </Td>
+                                                                      <Td>
+                                                                           <span className="text-button text-dark font-semibold capitalize ">
+                                                                                $
+                                                                                {
+                                                                                     item
+                                                                                          .product
+                                                                                          .total_earning
+                                                                                }
+                                                                           </span>
+                                                                      </Td>
+                                                                 </Tr>
+                                                            )
+                                                       )}
+                                                  </TableBody>
+                                             </div>
                                         </Table>
                                    </div>
                               </LayoutBox>
