@@ -1,85 +1,85 @@
 "use client";
+import {
+    ResponsiveContainer,
+    AreaChart,
+    Area,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+} from "recharts";
 
-import React, { useEffect, useRef, useState } from "react";
-import Chart from "chart.js/auto";
+function DashboardInfoLineChart({ chart_data, type }) {
+    const data = chart_data;
 
-const LineChart = ({ chart_data, type }) => {
-     const chartRef = useRef();
+    const xAxisFormatter = (tickItem) => {
+        return `${tickItem}`;
+    };
 
-     useEffect(() => {
-          const ctx = chartRef.current.getContext("2d");
-          const myChart = new Chart(ctx, {
-               type: "line",
-               data: {
-                    labels: [
-                         "January",
-                         "February",
-                         "March",
-                         "April",
-                         "May",
-                         "June",
-                         "July",
-                         "Aug",
-                         "Sup",
-                         "Oct",
-                         "Nov",
-                         "Dec",
-                    ],
-                    datasets: [
-                         {
-                              data: chart_data,
-                              fill: true,
-                              backgroundColor:
-                                   type === "increment" ? "#E8FAF8" : "#FCEBEA",
-                              borderColor:
-                                   type === "increment" ? "#15CAB8" : "#E2362F",
-                              tension: 0.4,
-                         },
-                    ],
-               },
-               options: {
-                    plugins: {
-                         legend: {
-                              display: false,
-                         },
-                    },
-                    scales: {
-                         x: {
-                              display: false,
-                         },
-                         y: {
-                              display: false,
-                         },
-                    },
-                    elements: {
-                         point: {
-                              radius: false,
-                         },
-                         line: {
-                              borderWidth: 2,
-                         },
-                    },
-                    layout: {
-                         padding: {
-                              left: 0,
-                              right: 0,
-                              top: 0,
-                              bottom: 0,
-                         },
-                    },
-               },
-          });
+    const yAxisFormatter = (tickItem) => {
+        return `${tickItem}`;
+    };
 
-          return () => {
-               myChart.destroy();
-          };
-     }, []);
+    return (
+        <>
+            <div className="w-[200px] h-[80px] -mr-[20px]">
+                <ResponsiveContainer>
+                    <AreaChart
+                        data={data}
+                        syncId="anyId"
+                        margin={{
+                            top: 10,
+                            right: 30,
+                            left: 0,
+                            bottom: 0,
+                        }}>
+                        <defs>
+                            {/* light gradient */}
+                            <linearGradient
+                                id="lightGreenGradient"
+                                x1="0"
+                                y1="0"
+                                x2="0"
+                                y2="1">
+                                <stop
+                                    offset="5%"
+                                    stopColor="rgba(21, 202, 184, 0.40)"
+                                />
+                                <stop
+                                    offset="95%"
+                                    stopColor="rgba(21, 202, 184, 0.01)"
+                                />
+                            </linearGradient>
 
-     return (
-          <canvas ref={chartRef} style={{ width: "131px", height: "75px" }} />
-     );
-};
+                            {/* light red  */}
+                            <linearGradient
+                                id="redGradient"
+                                x1="0"
+                                y1="0"
+                                x2="0"
+                                y2="1">
+                                <stop
+                                    offset="0%"
+                                    stopColor="rgba(226, 54, 47, 0.40)"
+                                />
+                                <stop
+                                    offset="100%"
+                                    stopColor="rgba(226, 54, 47, 0.01)"
+                                />
+                            </linearGradient>
+                        </defs>
+                        <Area
+                            type="monotone"
+                            dataKey="pv"
+                            strokeWidth={3}
+                            stroke={` ${type === "increment" ? "#15CAB8" : "#E2362F"} `}
+                            fill={`url(${type === "increment" ? "#lightGreenGradient" : "#redGradient"})`}
+                        />
+                    </AreaChart>
+                </ResponsiveContainer>
+            </div>
+        </>
+    );
+}
 
-export default LineChart;
-
-//
+export default DashboardInfoLineChart;

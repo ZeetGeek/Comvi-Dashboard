@@ -1,5 +1,5 @@
 export const Table = ({ children, className }) => (
-     <div className="overflow-hidden rounded-sm border-[1px] border-primary-lightest">
+     <div className="overflow-hidden rounded-sm border-[1px] border-primary-lightest dark:border-neutral-700">
           <table className={` ${className} overflow-auto w-full`}>
                {children}
           </table>
@@ -7,9 +7,10 @@ export const Table = ({ children, className }) => (
 );
 
 export const TableHead = ({ children, className }) => (
-     <thead className={`${className} border-b-[1px] border-primary-lightest`}>
-          {children}
-     </thead>
+    <thead
+        className={`${className} border-b-[1px] border-primary-lightest dark:border-neutral-700`}>
+        {children}
+    </thead>
 );
 
 export const Th = ({ children, className, align }) => (
@@ -23,11 +24,10 @@ export const Th = ({ children, className, align }) => (
 );
 
 export const Tr = ({ children, className }) => (
-     <tr
-          className={` ${className} py-[1rem] px-[1.25rem] border-b-[1px] last:border-0 first:border-0 border-primary-lightest block w-full duration-300 `}
-     >
-          {children}
-     </tr>
+    <tr
+        className={` ${className} flex items-center justify-between py-[1rem] px-[1.25rem] border-b-[1px] last:border-0 first:border-t-0 border-primary-lightest dark:border-neutral-700 w-full duration-300 `}>
+        {children}
+    </tr>
 );
 
 export const TableBody = ({ children, className }) => (

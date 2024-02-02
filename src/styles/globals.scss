@@ -3,37 +3,30 @@
 @tailwind utilities;
 
 * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-// scrollbar  
+// scrollbar
 
 body::-webkit-scrollbar {
-     display: none;
+    display: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-     display: none;
+    display: none;
 }
 
 // layout classes
 
+.container {
+    max-width: 100%;
+}
+
 .row {
-     display: flex;
-     gap: 2rem;
+    display: flex;
+    gap: 2rem;
 }
 
-// table classes
-
-tbody {
-     tr {
-          background-color: transparent;
-
-          &:hover {
-               background-color: rgb(245 245 245 / 1);
-          }
-     }
-}
 

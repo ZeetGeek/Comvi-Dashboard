@@ -31,30 +31,30 @@ const Select = ({ children }) => {
      );
 
      return (
-          <div className="relative">
-               <div
-                    className="cursor-pointer border-[1px] rounded-vsm border-primary-lightest bg-light py-[0.5rem] px-[1.25rem] flex items-center justify-between hover:bg-neutral-200/50 duration-300"
-                    onClick={() => setIsOpen(!isOpen)}
-               >
-                    <span className="text-admin capitalize text-sm font-normal">
-                         {selectedValue}
-                    </span>
+         <div className="relative">
+             <div
+                 className="cursor-pointer border-[1px] rounded-vsm border-primary-lightest dark:border-neutral-700  bg-light dark:bg-neutral-800 py-[0.5rem] px-[1.25rem] flex items-center justify-between hover:bg-neutral-200/50 hover:dark:bg-neutral-700/60 "
+                 onClick={() => setIsOpen(!isOpen)}>
+                 <span className="text-sm font-normal capitalize text-admin dark:text-neutral-100">
+                     {selectedValue}
+                 </span>
 
-                    <Image
-                         src={DropdownIcon}
-                         height={10}
-                         width={9}
-                         alt={"dropdown icon"}
-                    />
-               </div>
-               {isOpen && (
-                    <div className="absolute z-10 w-full border-[1px] rounded-vsm border-primary-lightest bg-light mt-2">
-                         <span className="text-admin capitalize text-sm font-normal">
-                              {renderedOptions}
-                         </span>
-                    </div>
-               )}
-          </div>
+                 <Image
+                     src={DropdownIcon}
+                     height={10}
+                     width={9}
+                     alt={"dropdown icon"}
+                     className="filter-white"
+                 />
+             </div>
+             {isOpen && (
+                 <div className="absolute z-10 w-full border-[1px] rounded-vsm border-primary-lightest dark:border-neutral-700  bg-light dark:bg-neutral-800  mt-2">
+                     <span className="text-sm font-normal capitalize text-admin dark:text-neutral-100">
+                         {renderedOptions}
+                     </span>
+                 </div>
+             )}
+         </div>
      );
 };
 

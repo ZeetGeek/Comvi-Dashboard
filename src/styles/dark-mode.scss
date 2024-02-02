@@ -1,0 +1,35 @@
+.dark {
+    .filter-white {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+            saturate(7466%) hue-rotate(273deg) brightness(100%) contrast(102%);
+    }
+
+    .filter-light-green {
+        filter: brightness(0) saturate(100%) invert(67%) sepia(63%)
+            saturate(3655%) hue-rotate(131deg) brightness(104%) contrast(84%);
+    }
+
+    .slider-dark-border {
+        border-color: #15cab8 !important;
+    }
+
+    .menu_links_wrapper_gl:has(.submenu-border-and-text) {
+        button {
+            border-color: #15cab8 !important;
+        }
+    }
+
+    .submenu-border-and-text {
+        a {
+            color: #15cab8 !important;
+
+            &:hover {
+                color: #15cab8 !important;
+            }
+        }
+    }
+
+    .product_bg_image_gl {
+        background-color: #15cab8;
+    }
+}
