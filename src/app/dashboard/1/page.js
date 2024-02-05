@@ -8,19 +8,18 @@ export default function DashboardOne() {
           <>
                {/* dashboard info */}
                <section id="dashboard-info">
-                    <div className="mb-[2rem] mt-[1.125rem]">
+                    <div className="mb-32 mt-18">
                          <DashboardInfo />
                     </div>
                </section>
 
                {/* sales analytics and category */}
                <section id="sales-info">
-                    <div className="mb-[2rem]">
+                    <div className="mb-32">
                          <SalesInfo />
                     </div>
                </section>
 
-               {/* product selling and trending product info */}
                <section id="product-info">
                     <div>
                          <ProductInfo />

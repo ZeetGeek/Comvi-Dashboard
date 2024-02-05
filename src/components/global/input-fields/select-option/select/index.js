@@ -33,7 +33,7 @@ const Select = ({ children }) => {
      return (
          <div className="relative">
              <div
-                 className="cursor-pointer border-[1px] rounded-vsm border-primary-lightest dark:border-neutral-700  bg-light dark:bg-neutral-800 py-[0.5rem] px-[1.25rem] flex items-center justify-between hover:bg-neutral-200/50 hover:dark:bg-neutral-700/60 "
+                 className="cursor-pointer border-[1px] rounded-vsm border-primary-lightest dark:border-neutral-700  bg-light dark:bg-neutral-800 py-[0.5rem] px-20 flex items-center justify-between hover:bg-neutral-200/50 hover:dark:bg-neutral-700/60 "
                  onClick={() => setIsOpen(!isOpen)}>
                  <span className="text-sm font-normal capitalize text-admin dark:text-neutral-100">
                      {selectedValue}

@@ -39,13 +39,13 @@ function SidebarLink({
                     <>
                         <button
                             onClick={() => {
-                                {
-                                    isActive === false ? toggleActive() : null;
-                                }
+                                // {
+                                //     isActive === false ? toggleActive() : null;
+                                // }
                                 isSubmenuOpen(!submenuOpen);
                             }}
                             name={text}
-                            className={`flex items-center justify-between px-[1.5rem] py-[0.75rem]  duration-300 hover:bg-white/10 w-full border-l-[4px] border-transparent`}>
+                            className={`flex items-center justify-between px-24 py-[0.75rem]  duration-300 hover:bg-white/10 w-full border-l-[4px] border-transparent`}>
                             {/* icon and text */}
                             <div className="flex items-center gap-[0.93rem]">
                                 <Image
@@ -63,7 +63,7 @@ function SidebarLink({
                             {/* notification or submenu */}
                             <div className={`${className}`}>
                                 <div
-                                    className={` ${submenuOpen ? style.submenu_active : ""} h-[1.5rem] w-[1.5rem] rounded-[0.25rem] flex items-center justify-center `}>
+                                    className={` ${submenuOpen ? style.submenu_active : ""} h-24 w-24 rounded-[0.25rem] flex items-center justify-center `}>
                                     <Image
                                         src={SubmenuIcon}
                                         width={14}
@@ -80,7 +80,7 @@ function SidebarLink({
                         {submenuOpen ? (
                             <>
                                 <div className="mt-3">
-                                    <ul className="list-disc ps-[3rem] pe-[1.5rem] marker:text-white">
+                                    <ul className="list-disc ps-[3rem] pe-24 marker:text-white">
                                         {submenu_links.map((item, index) => (
                                             <>
                                                 <li
@@ -123,7 +123,7 @@ function SidebarLink({
                                 pathname === navigate
                                     ? "slider-dark-border"
                                     : ""
-                            } flex items-center justify-between px-[1.5rem] py-[0.75rem] duration-300 hover:bg-white/10`}>
+                            } flex items-center justify-between px-24 py-[0.75rem] duration-300 hover:bg-white/10`}>
                             {/* icon and text */}
                             <div className="flex items-center gap-[0.93rem]">
                                 <Image
@@ -142,7 +142,7 @@ function SidebarLink({
                             <div className={`${className}`}>
                                 {typeof notification === "number" ? (
                                     <>
-                                        <div className="h-[1.5rem] w-[1.5rem] bg-secondary dark:bg-primary-light rounded-[0.25rem] flex items-center justify-center leading-[0px]">
+                                        <div className="h-24 w-24 bg-secondary dark:bg-primary-light rounded-[0.25rem] flex items-center justify-center leading-[0px]">
                                             <span className="text-sm font-semibold text-white">
                                                 {notification}
                                             </span>

@@ -2,7 +2,7 @@ function CategoryInfo({ list_color, product }) {
     return (
         <>
             <li className="mb-[1rem] last:mb-0">
-                <div className="relative pl-[1.125rem]">
+                <div className="relative pl-18">
                     {/* list circle */}
                     <div
                         className={` ${
@@ -17,10 +17,10 @@ function CategoryInfo({ list_color, product }) {
                                       : list_color === "secondary"
                                         ? "bg-secondary outline-secondary/5"
                                         : ""
-                        }  h-[7px] w-[7px] outline-[4px] rounded-full outline absolute top-[7px] -left-[10px]`}></div>
+                        }  h-[7px] w-[7px] outline-[4px] rounded-full outline absolute top-[7px] -left-[5px] sm:-left-10`}></div>
 
                     {/* category info */}
-                    <div className="flex items-start justify-between">
+                    <div className="flex items-start justify-between gap-10">
                         {/* category name and category products */}
                         <div>
                             {/* name and percentage */}
@@ -34,7 +34,7 @@ function CategoryInfo({ list_color, product }) {
                         {/* total revenue */}
                         <div>
                             <span className="font-semibold text-dark dark:text-neutral-500 text-button">
-                                $ {product.revenue}
+                                ${product.revenue}
                             </span>
                         </div>
                     </div>

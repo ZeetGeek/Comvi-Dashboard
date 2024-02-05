@@ -26,7 +26,12 @@ body::-webkit-scrollbar {
 
 .row {
     display: flex;
-    gap: 2rem;
 }
 
 
+// chart 
+
+.recharts-wrapper {
+    width: 100% !important;
+    height: auto;
+}

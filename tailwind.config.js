@@ -19,15 +19,16 @@ module.exports = {
             fontSize: {
                 vsm: ["0.75rem"],
                 sm: ["0.875rem"],
-                md: ["1rem"],
-                lg: ["1.125rem"],
-                xl: ["1.25rem"],
-                "2xl": ["1.375rem"],
-                "3xl": ["1.5rem"],
-                "4xl": ["1.625rem"],
-                "5xl": ["1.7rem"],
-                "6xl": ["2rem"],
-                "display-1": ["2.625rem"],
+                md: "clamp(0.875rem, 0.85rem + 0.125vw, 1rem)",
+                lg: "clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem)",
+                xl: "clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem)",
+                "2xl": "clamp(1rem, 0.925rem + 0.375vw, 1.375rem)",
+                "3xl": "clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem)",
+                "4xl": "clamp(1.25rem, 1.175rem + 0.375vw, 1.625rem)",
+                "5xl": "clamp(1.375rem, 1.3rem + 0.375vw, 1.75rem)",
+                "6xl": "clamp(1.5rem, 1.4rem + 0.5vw, 2rem)",
+                "display-1": "clamp(1.625rem, 1.425rem + 1vw, 2.625rem)",
+
                 button: [
                     "0.9375rem",
                     {
@@ -71,6 +72,16 @@ module.exports = {
                 dark: "#18120F",
             },
 
+            // spacing
+            spacing: {
+                10 : "clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem)",
+                18: "clamp(1rem, 0.975rem + 0.125vw, 1.125rem)",
+                20: "clamp(1.125rem, 1.1rem + 0.125vw, 1.25rem)",
+                24: "clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem)",
+                28: "clamp(1.375rem, 1.3rem + 0.375vw, 1.75rem)",
+                32: "clamp(1.25rem, 1.1rem + 0.75vw, 2rem)",
+            },
+
             // custom border radius
             borderRadius: {
                 // xxl: "",
@@ -90,6 +101,11 @@ module.exports = {
             // box shadows
             boxShadow: {
                 "layout-box": "0px 5px 30px 0px rgba(170, 170, 170, 0.06)",
+            },
+
+            // screen
+            screens: {
+                sm: "575px",
             },
         },
     },

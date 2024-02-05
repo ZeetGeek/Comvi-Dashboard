@@ -25,14 +25,13 @@ import IncrementIcon from "@/images/components/dashboard/1/icons/increment.svg";
 // data
 import { top_selling_products } from "@/data/dashboard/1";
 
-
 function ProductInfo() {
     return (
         <>
             <div className="container">
-                <div className="row">
-                    <div className="w-9/12 ">
-                        <LayoutBox className="p-[1.5rem]">
+                <div className="flex flex-col lg:flex-row gap-32">
+                    <div className="w-full lg:w-9/12 ">
+                        <LayoutBox className="p-24">
                             {/* title and options */}
                             <div className="flex items-center justify-between">
                                 {/* title */}
@@ -77,7 +76,7 @@ function ProductInfo() {
                                         </Tr>
                                     </TableHead>
 
-                                    <div className="h-[296px] overflow-auto scrollbar-hide flex justify-between">
+                                    <div className="h-[296px] overflow-auto scrollbar-hide  flex justify-between">
                                         <TableBody className="w-full">
                                             {top_selling_products.map(
                                                 (item) => (
@@ -187,22 +186,23 @@ function ProductInfo() {
                     </div>
 
                     {/* trading product */}
-                    <div className="w-3/12">
+                    <div className="w-full lg:w-3/12">
                         <LayoutBox className="h-full">
                             <div
-                                className={`product_bg_image_gl p-[1.5rem] h-full bg-trending-product-image bg-center bg-cover relative`}
+                                className={`product_bg_image_gl p-24 h-full bg-trending-product-image bg-center bg-cover relative`}
                                 style={{
-                                    borderRadius : "22px",
+                                    borderRadius: "22px",
                                     backgroundImage: `url(${TrendingProductImage.src})`,
                                 }}>
                                 <div className="relative z-10 flex flex-col items-start justify-between h-full">
                                     <div>
                                         {/* title */}
-                                        <LayoutTitle className="dark:text-dark" >Trending Now</LayoutTitle>
+                                        <LayoutTitle className="dark:text-dark">
+                                            Trending Now
+                                        </LayoutTitle>
 
                                         {/* product info */}
                                         <div className="flex items-center mt-3">
-                                   
                                             {/* vc icon */}
                                             <Image
                                                 src={IncrementIcon}

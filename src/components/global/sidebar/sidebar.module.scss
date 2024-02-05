@@ -1,4 +1,14 @@
 .sidebar {
+    @media (max-width: 1024px) {
+        position: fixed;
+        top: 0;
+        left: -200%;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
     /* width */
     &::-webkit-scrollbar {
         width: 5px;
@@ -12,6 +22,10 @@
     /* Handle */
     &::-webkit-scrollbar-thumb {
         background: #ff8548;
+
+        @media (max-width: 1024px) {
+            background: #15CAB8;
+        }
     }
 
     /* Handle on hover */
@@ -21,10 +35,35 @@
 
     &.active {
         width: auto;
+        max-width: auto;
+        min-width: auto;
+
+        @media (max-width: 1024px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            max-width: 100%;
+            width: 300px;
+            height: 100%;
+            z-index: 10;
+            transition: 0.3s;
+            border-radius: 0px;
+        }
+
+        // @media (max-width: 480px) {
+        //     width: 100%;
+        // }
 
         .logo {
+            padding-left: 20px;
+            padding-right: 20px;
+
             span {
                 display: none;
+
+                @media (max-width: 1024px) {
+                    display: block;
+                }
             }
         }
 
@@ -33,11 +72,26 @@
             padding-right: 0;
             width: 100%;
             text-align: center;
+
+            @media (max-width: 1024px) {
+                text-align: left;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
 
         ul {
+            @media (max-width: 1024px) {
+                display: block;
+                padding-left: 0px;
+                list-style: circle;
+            }
+
             ul {
                 display: none;
+                @media (max-width: 1024px) {
+                    display: block;
+                }
             }
         }
 
@@ -46,10 +100,20 @@
             align-items: center;
             justify-content: center;
 
+            @media (max-width: 1024px) {
+                display: block;
+            }
+
             button {
                 justify-content: center;
                 padding-left: 0px;
                 padding-right: 0px;
+
+                @media (max-width: 1024px) {
+                    justify-content: space-between;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
             }
 
             a {
@@ -59,6 +123,12 @@
                 width: 100%;
                 padding-left: 0px;
                 padding-right: 0px;
+
+                @media (max-width: 1024px) {
+                    justify-content: space-between;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
             }
 
             img {
@@ -69,15 +139,27 @@
 
             span {
                 display: none;
+
+                @media (max-width: 1024px) {
+                    display: block;
+                }
             }
         }
 
         .advertise_banner {
             display: none;
+
+            @media (max-width: 1024px) {
+                display: block;
+            }
         }
 
         .menu_icon_and_notification {
             display: none;
+
+            @media (max-width: 1024px) {
+                display: block;
+            }
         }
     }
 }

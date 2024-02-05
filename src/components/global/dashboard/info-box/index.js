@@ -13,11 +13,11 @@ import DecrementIcon from "@/images/components/dashboard/1/icons/decrement.svg";
 function InfoBox({ title, title_icon, price, chart_data, parentage }) {
     return (
         <>
-            <LayoutBox className="shadow-layout-box py-[1.75rem] px-[1.5rem] ">
+            <LayoutBox className="px-24 shadow-layout-box py-28 ">
                 <div>
                     {/* title and icon */}
                     <div className="flex items-center gap-[0.5rem]">
-                        <div className="h-[1.25rem] w-[1.25rem] bg-info flex items-center justify-center rounded-[5px]">
+                        <div className="h-20 w-20 bg-info flex items-center justify-center rounded-[5px]">
                             {/* icon */}
                             <Image
                                 src={title_icon}
@@ -31,14 +31,14 @@ function InfoBox({ title, title_icon, price, chart_data, parentage }) {
                         </span>
                     </div>
                     {/* info */}
-                    <div className="flex justify-between">
+                    <div className="flex justify-between gap-[1rem]">
                         {/* number */}
                         <h4 className="text-dark dark:text-primary-light font-extrabold text-display-1 mt-[0.8125rem] ">
                             ${price}
                         </h4>
 
                         {/* chart */}
-                        <div>
+                        <div className="w-full" >
                             <DashboardInfoLineChart
                                 chart_data={chart_data}
                                 type={parentage.type}

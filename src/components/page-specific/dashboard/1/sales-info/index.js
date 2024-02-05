@@ -16,10 +16,10 @@ import { category_info } from "@/data/dashboard/1";
 function SalesInfo() {
     return (
         <div className="container">
-            <div className="row">
+            <div className="grid gap-32 2xl:grid-cols-2 xl:grid-cols-3">
                 {/* sales analytics */}
-                <div className="w-1/2">
-                    <LayoutBox className="p-[1.5rem] ">
+                <div>
+                    <LayoutBox className="p-24 h-full">
                         {/* title and options */}
                         <div className="flex items-center justify-between">
                             {/* title */}
@@ -43,10 +43,10 @@ function SalesInfo() {
                 </div>
 
                 {/* sales by category */}
-                <div className="w-1/2">
-                    <LayoutBox className="p-[1.5rem]">
+                <div className="2xl:col-span-1 xl:col-span-2 ">
+                    <LayoutBox className="p-24 h-full">
                         {/* title and options */}
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between ">
                             {/* title */}
                             <LayoutTitle>Sales by Category</LayoutTitle>
 
@@ -59,10 +59,10 @@ function SalesInfo() {
                                 </Select>
                             </div>
                         </div>
-                        <div className="row items-center mt-[1rem]">
+                        <div className="flex flex-col sm:flex-row items-center mt-[1rem] gap-32">
                             {/* category chart and chart detail */}
-                            <div className="w-1/2">
-                                <div className="relative h-[294px] w-[294px]">
+                            <div className="w-full xl:w-1/2 sm:w-1/2">
+                                <div className="relative max-w-[294px] w-full mx-auto">
                                     <SalesCategoryChart />
 
                                     <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
@@ -72,7 +72,7 @@ function SalesInfo() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-1/2">
+                            <div className="w-full xl:w-1/2 sm:w-1/2">
                                 {/* category info */}
                                 <ul>
                                     {category_info.map((item) => (

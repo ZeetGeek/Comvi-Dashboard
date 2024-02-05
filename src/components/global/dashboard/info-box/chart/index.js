@@ -22,14 +22,14 @@ function DashboardInfoLineChart({ chart_data, type }) {
 
     return (
         <>
-            <div className="w-[200px] h-[80px] -mr-[20px]">
+            <div className="w-full h-[80px]">
                 <ResponsiveContainer>
                     <AreaChart
                         data={data}
                         syncId="anyId"
                         margin={{
-                            top: 10,
-                            right: 30,
+                            top: 0,
+                            right: 0,
                             left: 0,
                             bottom: 0,
                         }}>
@@ -47,7 +47,7 @@ function DashboardInfoLineChart({ chart_data, type }) {
                                 />
                                 <stop
                                     offset="95%"
-                                    stopColor="rgba(21, 202, 184, 0.01)"
+                                    stopColor="rgba(21, 202, 184, 0.00)"
                                 />
                             </linearGradient>
 

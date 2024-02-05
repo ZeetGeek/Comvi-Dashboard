@@ -37,9 +37,9 @@ function SalesLineChart() {
                               data={data}
                               syncId="anyId"
                               margin={{
-                                   top: 10,
-                                   right: 30,
-                                   left: 0,
+                                   top: 0,
+                                   right: 0,
+                                   left: -20,
                                    bottom: 0,
                               }}
                          >

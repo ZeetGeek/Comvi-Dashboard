@@ -4,14 +4,14 @@ function Button({ children, size, color, className, name, gap }) {
                <button
                     className={` ${className} ${
                          size === "default"
-                              ? "py-[0.375rem] px-[1.25rem] "
+                              ? "py-[0.375rem] px-20 "
                               : size === "medium"
-                                ? "py-[0.625rem] px-[1.5rem]"
+                                ? "py-[0.625rem] px-24"
                                 : size === "large"
-                                  ? "py-[0.6875rem] px-[1.75rem]"
+                                  ? "py-[0.6875rem] px-28"
                                   : size === "extra-large"
                                     ? "py-[0.9375rem] px-[2.1875rem]"
-                                    : "py-[0.375rem] px-[1.25rem]"
+                                    : "py-[0.375rem] px-20"
                     } ${
                          color === "default"
                               ? "bg-light border-[1px] border-primary-lightest hover:bg-neutral-100 text-admin"

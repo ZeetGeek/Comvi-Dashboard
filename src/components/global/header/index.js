@@ -19,26 +19,23 @@ function Header() {
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
-        // Check for saved dark mode preference
         const isDarkMode = localStorage.getItem("darkMode") === "true";
         setDarkMode(isDarkMode);
-        // Apply the dark class to the body tag
         document.body.classList.toggle("dark", isDarkMode);
     }, []);
-
     const toggleDarkMode = () => {
         const newDarkMode = !darkMode;
         setDarkMode(newDarkMode);
-        // Store dark mode preference
+
         localStorage.setItem("darkMode", newDarkMode);
-        // Apply the dark class to the body tag
+
         document.body.classList.toggle("dark", newDarkMode);
     };
 
     return (
         <header>
             <div className="flex items-center justify-between">
-                <div className="flex items-center gap-[1.1875rem]">
+                <div className="flex items-center gap-[7px] md:gap-18 ">
                     <IconButton onClick={toggleActive}>
                         <Image
                             src={isActive ? sidebarOpenIcon : sidebarCloseIcon}
@@ -56,9 +53,9 @@ function Header() {
                         Dashboard
                     </span>
                 </div>
-                <div className="flex items-center">
-                    <div className="flex items-center gap-[1.5rem]">
-                        <IconButton>
+                <div className="flex items-center gap-[5px] md:gap-0">
+                    <div className="flex items-center gap-24">
+                        <IconButton className="hidden md:flex">
                             <Image
                                 src={searchIcon}
                                 height={22}
@@ -67,7 +64,7 @@ function Header() {
                                 className="filter-light-green"
                             />
                         </IconButton>
-                        <IconButton className="relative">
+                        <IconButton className="relative hidden md:flex">
                             <Image
                                 src={notificationIcon}
                                 height={21}
@@ -85,24 +82,24 @@ function Header() {
                                 height={24}
                                 width={24}
                                 alt={darkMode ? "Moon Icon" : " Sun Icon"}
-                                 className="filter-light-green"
+                                className="filter-light-green"
                             />
                         </IconButton>
-                        <IconButton className="relative">
+                        <IconButton className="relative hidden md:flex">
                             <Image
                                 src={cartIcon}
                                 height={20}
                                 width={24}
                                 alt="Cart Icon"
-                                 className="filter-light-green"
+                                className="filter-light-green"
                             />
                             <div className="absolute right-[0] top-[0] rounded-full flex items-center justify-center bg-primary-light h-[1rem] w-[1rem]">
                                 <span className="text-white text-vsm">3</span>
                             </div>
                         </IconButton>
                     </div>
-                    <div className="h-[3.43rem] w-[1px] bg-primary-lightest ms-[1.87rem] me-[1.67rem]" />
-                    <button className="flex items-center gap-[0.625rem]  duration-300 bg-transparent hover:bg-primary/10 hover:dark:bg-white/10 py-[5px] px-[10px] rounded-vsm">
+                    <div className="hidden md:block h-[3.43rem] w-[1px] bg-primary-lightest ms-[1.87rem] me-[1.67rem]"></div>
+                    <button className="flex items-center gap-[0.625rem]  duration-300 bg-transparent hover:bg-primary/10 hover:dark:bg-white/10 md:py-[5px] py-[10px] px-[10px] rounded-vsm">
                         <div className="h-[2.5rem] w-[2.5rem] rounded-full border-[1px] border-color-avatar-border">
                             <Image
                                 src={avatar}
@@ -112,7 +109,7 @@ function Header() {
                                 className="object-cover rounded-full"
                             />
                         </div>
-                        <div className="flex flex-col items-start">
+                        <div className=" hidden md:flex flex-col items-start">
                             <span className="font-bold capitalize text-dark text-md dark:text-white">
                                 Gladys Kanyinda
                             </span>
