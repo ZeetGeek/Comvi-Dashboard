@@ -29,8 +29,8 @@ function ProductInfo() {
     return (
         <>
             <div className="container">
-                <div className="flex flex-col lg:flex-row gap-32">
-                    <div className="w-full lg:w-9/12 ">
+                <div className="flex flex-col md:flex-row gap-32">
+                    <div className="w-full xl:w-9/12 lg:w-7/12 md:w-8/12">
                         <LayoutBox className="p-24">
                             {/* title and options */}
                             <div className="flex items-center justify-between">
@@ -186,8 +186,8 @@ function ProductInfo() {
                     </div>
 
                     {/* trading product */}
-                    <div className="w-full lg:w-3/12">
-                        <LayoutBox className="h-full">
+                    <div className="w-full xl:w-3/12 lg:w-5/12 md:w-4/12">
+                        <LayoutBox className="h-[400px] md:h-full">
                             <div
                                 className={`product_bg_image_gl p-24 h-full bg-trending-product-image bg-center bg-cover relative`}
                                 style={{
