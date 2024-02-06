@@ -5,7 +5,7 @@ import Image from "next/image";
 import { H4Title } from "@/components/global/layout/title";
 
 // images
-import Logo from "@/images/logo/logo-icon.svg";
+import Logo from "@/images/logo/Logo-icon.svg";
 
 // layout box
 export const LayoutBox = ({ children, className }) => {
