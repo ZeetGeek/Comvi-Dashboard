@@ -10,7 +10,7 @@ import Button from "@/components/global/theme-buttons/button";
 import IconButton from "@/components/global/theme-buttons/icon-button";
 
 // images
-import logoIcon from "@/images/logo/logo-icon.png";
+import logoIcon from "@/images/logo/logo-icon.svg";
 import advertiseImage from "@/images/components/sidebar/advertise-image.png";
 import closeIcon from "@/images/components/sidebar/close.svg";
 
@@ -24,23 +24,23 @@ import style from "./sidebar.module.scss";
 // context
 import { ActiveContext } from "@/context/ActiveContext.js";
 
-
 function Sidebar() {
     const { isActive } = useContext(ActiveContext);
     const { toggleActive } = useContext(ActiveContext);
 
-    const sliderClass = isActive ? "Hello" : style.active;
+    const sliderClass = isActive ? "" : style.active;
 
     return (
         <>
             <aside>
                 <div
-                    className={` ${style.sidebar} ${sliderClass} shadow-2xl shadow-primary-light/50 lg:shadow-none  h-full bg-primary dark:bg-neutral-900 overflow-auto flex-shrink-0 w-full max-w-[296px] min-w-[250px] rounded-lg`}>
+                    className={` ${style.sidebar} ${sliderClass} shadow-2xl shadow-primary-light/50 lg:shadow-none h-full bg-primary dark:bg-neutral-900 overflow-auto flex-shrink-0 w-[296px] min-w-[250px] rounded-lg`}>
                     <div className="flex flex-col justify-between h-full">
                         {/* sidebar menu links and other links */}
                         <div>
                             {/* logo and close icon */}
-                            <div className={`${style.logo} px-24 pt-24 pb-32 flex items-center justify-between`}>
+                            <div
+                                className={`${style.logo} px-24 pt-24 pb-32 flex items-center justify-between`}>
                                 <button
                                     onClick={toggleActive}
                                     className="flex items-center gap-[0.56rem]"
@@ -56,8 +56,16 @@ function Sidebar() {
                                     </span>
                                 </button>
 
-                                <IconButton name="close sidebar button" onClick={toggleActive} className="hover:bg-white/10 lg:hidden" >
-                                    <Image src={closeIcon} height={24} width={24} alt="close icon" />
+                                <IconButton
+                                    name="close sidebar button"
+                                    onClick={toggleActive}
+                                    className="hover:bg-white/10 lg:hidden">
+                                    <Image
+                                        src={closeIcon}
+                                        height={24}
+                                        width={24}
+                                        alt="close icon"
+                                    />
                                 </IconButton>
                             </div>
 

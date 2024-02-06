@@ -3,7 +3,8 @@ import Image from "next/image";
 
 // components
 import DashboardInfoLineChart from "@/components/global/dashboard/info-box/chart";
-import LayoutBox from "@/components/global/layout/layout-box";
+import { LayoutBox } from "@/components/global/layout/boxes";
+import { H3Title } from "@/components/global/layout/title";
 
 // images
 
@@ -16,7 +17,7 @@ function InfoBox({ title, title_icon, price, chart_data, parentage }) {
             <LayoutBox className="px-24 shadow-layout-box py-28 ">
                 <div>
                     {/* title and icon */}
-                    <div className="flex items-center gap-[0.5rem]">
+                    <div className="flex items-center gap-8">
                         <div className="h-20 w-20 bg-info flex items-center justify-center rounded-[5px]">
                             {/* icon */}
                             <Image
@@ -33,12 +34,12 @@ function InfoBox({ title, title_icon, price, chart_data, parentage }) {
                     {/* info */}
                     <div className="flex justify-between gap-[1rem]">
                         {/* number */}
-                        <h4 className="text-dark dark:text-primary-light font-extrabold text-display-1 mt-[0.8125rem] ">
+                        <H3Title className="dark:text-primary-light mt-[0.8125rem] ">
                             ${price}
-                        </h4>
+                        </H3Title>
 
                         {/* chart */}
-                        <div className="w-full" >
+                        <div className="w-full">
                             <DashboardInfoLineChart
                                 chart_data={chart_data}
                                 type={parentage.type}
@@ -46,7 +47,7 @@ function InfoBox({ title, title_icon, price, chart_data, parentage }) {
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center mt-[0.375rem]">
+                <div className="flex items-center mt-6">
                     {/* vc info */}
                     {parentage.type === "increment" ? (
                         <>
@@ -70,7 +71,7 @@ function InfoBox({ title, title_icon, price, chart_data, parentage }) {
 
                     {/* vs percentage */}
                     <span
-                        className={`d-inline-block ms-[0.5rem] me-[0.375rem]  ${parentage.type === "increment" ? "text-primary-light" : "text-danger"} font-semibold text-sm`}>
+                        className={`d-inline-block ms-8 me-6  ${parentage.type === "increment" ? "text-primary-light" : "text-danger"} font-semibold text-sm`}>
                         {parentage.type === "increment" ? "+" : "-"}
                         {parentage.number}%
                     </span>

@@ -3,8 +3,8 @@ import Image from "next/image";
 import TrendingProductImage from "@/images/components/dashboard/1/products-image/trending-product.png";
 
 // components
-import LayoutBox from "@/components/global/layout/layout-box";
-import LayoutTitle from "@/components/global/layout/layout-title";
+import { LayoutBox } from "@/components/global/layout/boxes";
+import { H5Title } from "@/components/global/layout/title";
 import {
     Table,
     TableHead,
@@ -15,8 +15,8 @@ import {
 } from "@/components/global/table";
 
 import ShortingButton from "@/components/global/theme-buttons/shorting-button";
-import Select from "@/components/global/input-fields/select-option/select";
-import Option from "@/components/global/input-fields/select-option/option";
+import Select from "@/components/global/form-fields/select-option/select";
+import Option from "@/components/global/form-fields/select-option/option";
 import Badge from "@/components/global/badge";
 
 // images
@@ -35,7 +35,7 @@ function ProductInfo() {
                             {/* title and options */}
                             <div className="flex items-center justify-between">
                                 {/* title */}
-                                <LayoutTitle>Top Selling</LayoutTitle>
+                                <H5Title>Top Selling</H5Title>
                                 {/* options */}
                                 <div className="w-[105px]">
                                     <Select>
@@ -85,9 +85,9 @@ function ProductInfo() {
                                                         className="duration-300 bg-transparent hover:bg-neutral-100 hover:dark:bg-neutral-800">
                                                         {/* product image , name and id */}
                                                         <Td className="w-[340px]">
-                                                            <div className="flex items-center justify-start gap-[0.5rem]">
+                                                            <div className="flex items-center justify-start gap-8">
                                                                 {/* image */}
-                                                                <div className="h-[2.5rem] w-[2.5rem] rounded-[0.5rem] overflow-hidden">
+                                                                <div className="h-[2.5rem] w-[2.5rem] rounded-8 overflow-hidden">
                                                                     <Image
                                                                         className="object-cover h-full"
                                                                         src={
@@ -197,9 +197,9 @@ function ProductInfo() {
                                 <div className="relative z-10 flex flex-col items-start justify-between h-full">
                                     <div>
                                         {/* title */}
-                                        <LayoutTitle className="dark:text-dark">
+                                        <H5Title className="dark:text-dark">
                                             Trending Now
-                                        </LayoutTitle>
+                                        </H5Title>
 
                                         {/* product info */}
                                         <div className="flex items-center mt-3">
@@ -214,7 +214,7 @@ function ProductInfo() {
 
                                             {/* vs percentage */}
                                             <span
-                                                className={`d-inline-block ms-[0.5rem] me-[0.375rem] text-primary-light font-semibold text-sm dark:text-white`}>
+                                                className={`d-inline-block ms-8 me-6 text-primary-light font-semibold text-sm dark:text-white`}>
                                                 +12%
                                             </span>
 
@@ -231,7 +231,7 @@ function ProductInfo() {
                                         <span className="block text-lg font-extrabold text-dark dark:text-white">
                                             Single Breasted Blazer
                                         </span>
-                                        <span className="text-dark font-bold text-xl block mt-[0.625rem]  dark:text-white">
+                                        <span className="text-dark font-bold text-xl block mt-[10]  dark:text-white">
                                             $1499.99
                                         </span>
                                     </div>

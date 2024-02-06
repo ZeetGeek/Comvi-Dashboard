@@ -1,10 +1,14 @@
 "use client";
 
+// dependencies
 import { useState, useContext, useEffect } from "react";
 import Image from "next/image";
-import IconButton from "@/components/global/theme-buttons/icon-button";
-import { ActiveContext } from "@/context/ActiveContext.js";
 
+// components
+import IconButton from "@/components/global/theme-buttons/icon-button";
+import { H4Title } from "@/components/global/layout/title";
+
+// images
 import sidebarOpenIcon from "@/images/components/header/icons/open.svg";
 import sidebarCloseIcon from "@/images/components/header/icons/close.svg";
 import searchIcon from "@/images/components/header/icons/search.svg";
@@ -13,6 +17,9 @@ import sunIcon from "@/images/components/header/icons/sun.svg";
 import moonIcon from "@/images/components/header/icons/moon.svg";
 import cartIcon from "@/images/components/header/icons/cart.svg";
 import avatar from "@/images/components/header/avatar.jpg";
+
+// context
+import { ActiveContext } from "@/context/ActiveContext.js";
 
 function Header() {
     const { toggleActive, isActive } = useContext(ActiveContext);
@@ -49,9 +56,7 @@ function Header() {
                             }
                         />
                     </IconButton>
-                    <span className="text-6xl font-bold text-dark dark:text-white">
-                        Dashboard
-                    </span>
+                    <H4Title>Dashboard</H4Title>
                 </div>
                 <div className="flex items-center gap-[5px] md:gap-0">
                     <div className="flex items-center gap-24">
@@ -99,7 +104,7 @@ function Header() {
                         </IconButton>
                     </div>
                     <div className="hidden md:block h-[3.43rem] w-[1px] bg-primary-lightest ms-[1.87rem] me-[1.67rem]"></div>
-                    <button className="flex items-center gap-[0.625rem]  duration-300 bg-transparent hover:bg-primary/10 hover:dark:bg-white/10 md:py-[5px] py-[10px] px-[10px] rounded-vsm">
+                    <button className="flex items-center gap-10  duration-300 bg-transparent hover:bg-primary/10 hover:dark:bg-white/10 md:py-[5px] py-[10px] px-[10px] rounded-vsm">
                         <div className="h-[2.5rem] w-[2.5rem] rounded-full border-[1px] border-color-avatar-border">
                             <Image
                                 src={avatar}

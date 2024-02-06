@@ -1,10 +1,10 @@
 "use client";
 
 // components
-import LayoutBox from "@/components/global/layout/layout-box";
-import LayoutTitle from "@/components/global/layout/layout-title";
-import Select from "@/components/global/input-fields/select-option/select";
-import Option from "@/components/global/input-fields/select-option/option";
+import { LayoutBox } from "@/components/global/layout/boxes";
+import { H5Title } from "@/components/global/layout/title";
+import Select from "@/components/global/form-fields/select-option/select";
+import Option from "@/components/global/form-fields/select-option/option";
 import CategoryInfo from "./components/category-info";
 
 import SalesLineChart from "./chart/sales-line-chart";
@@ -23,7 +23,7 @@ function SalesInfo() {
                         {/* title and options */}
                         <div className="flex items-center justify-between">
                             {/* title */}
-                            <LayoutTitle>Sales Analytics</LayoutTitle>
+                            <H5Title>Sales Analytics</H5Title>
 
                             {/* options */}
                             <div className="w-[105px]">
@@ -48,7 +48,7 @@ function SalesInfo() {
                         {/* title and options */}
                         <div className="flex items-center justify-between ">
                             {/* title */}
-                            <LayoutTitle>Sales by Category</LayoutTitle>
+                            <H5Title>Sales by Category</H5Title>
 
                             {/* options */}
                             <div className="w-[105px]">
@@ -62,7 +62,7 @@ function SalesInfo() {
                         <div className="flex flex-col sm:flex-row items-center mt-[1rem] gap-32">
                             {/* category chart and chart detail */}
                             <div className="w-full xl:w-1/2 sm:w-1/2">
-                                <div className="relative max-w-[294px] w-full mx-auto">
+                                <div className="relative max-w-[294px] w-full mx-auto xl:m-0">
                                     <SalesCategoryChart />
 
                                     <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">

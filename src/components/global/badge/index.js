@@ -16,7 +16,7 @@ function Badge({ children, color }) {
                                       : color === "danger"
                                         ? "border-danger bg-danger/5 text-danger"
                                         : ""
-                    } py-[0.3125rem] px-[0.875rem] rounded-vsm border-[1px] text-sm font-normal`}
+                    } py-[0.3125rem] px-14 rounded-vsm border-[1px] text-sm font-normal`}
                >
                     {children}
                </span>

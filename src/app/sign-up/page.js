@@ -12,26 +12,18 @@ import Button from "@/components/global/theme-buttons/button";
 import GoogleIcon from "@/images/components/sign-and-sign-up/icons/google.svg";
 import TwitterIcon from "@/images/components/sign-and-sign-up/icons/twitter.svg";
 
-function SignIn() {
+function SignUp() {
     return (
         <>
             <div className="mx-32">
                 <Layout className="h-screen w-full flex items-center justify-center">
                     <AuthenticationBox
-                        title="Create an Account"
+                        title="Sing In"
                         description="Improve business performance with Comvi dashboards">
                         {/* sign in form */}
                         <form className="w-full">
-                            {/* name, password and email */}
+                            {/* email and email */}
                             <div>
-                                {/* name field */}
-                                <InputField
-                                    type="text"
-                                    label="Name"
-                                    name="name"
-                                    id="name"
-                                    placeholder="Name"
-                                />
                                 {/* email field */}
                                 <InputField
                                     type="email"
@@ -50,14 +42,14 @@ function SignIn() {
                                 />
                             </div>
 
-                            {/* create an account, google and twitter button */}
+                            {/* sign in, google and twitter button */}
                             <div className="mt-24 mb-32">
-                                {/* create an account button */}
+                                {/* sign in button */}
                                 <Button
                                     color="primary"
                                     size="extra-large"
                                     className="w-full mb-24">
-                                    Create an Account
+                                    Sing In
                                 </Button>
 
                                 {/* google button */}
@@ -87,14 +79,14 @@ function SignIn() {
                                 </Button>
                             </div>
 
-                            {/* Already have an Account? */}
+                            {/* Don't have an Account? */}
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-[12px]">
-                                Already have an Account?{" "}
+                                Don&apos;t have an Account?{" "}
                                 <Link
-                                    href="/sign-up"
+                                    href="/"
                                     className="inline-block text-primary font-semibold text-button hover:text-secondary "
                                     title="Sing In">
-                                    Sing In
+                                    Sing Up
                                 </Link>
                             </div>
                         </form>
@@ -105,4 +97,4 @@ function SignIn() {
     );
 }
 
-export default SignIn;
+export default SignUp;
