@@ -7,11 +7,11 @@ import Image from "next/image";
 // components
 import IconButton from "@/components/global/theme-buttons/icon-button";
 import { H4Title } from "@/components/global/layout/title";
+import HeaderSearch from "./components/search";
 
 // images
 import sidebarOpenIcon from "@/images/components/header/icons/open.svg";
 import sidebarCloseIcon from "@/images/components/header/icons/close.svg";
-import searchIcon from "@/images/components/header/icons/search.svg";
 import notificationIcon from "@/images/components/header/icons/notification.svg";
 import sunIcon from "@/images/components/header/icons/sun.svg";
 import moonIcon from "@/images/components/header/icons/moon.svg";
@@ -30,12 +30,11 @@ function Header() {
         setDarkMode(isDarkMode);
         document.body.classList.toggle("dark", isDarkMode);
     }, []);
+
     const toggleDarkMode = () => {
         const newDarkMode = !darkMode;
         setDarkMode(newDarkMode);
-
         localStorage.setItem("darkMode", newDarkMode);
-
         document.body.classList.toggle("dark", newDarkMode);
     };
 
@@ -60,15 +59,9 @@ function Header() {
                 </div>
                 <div className="flex items-center gap-[5px] md:gap-0">
                     <div className="flex items-center gap-24">
-                        <IconButton className="hidden md:flex">
-                            <Image
-                                src={searchIcon}
-                                height={22}
-                                width={22}
-                                alt="Search Icon"
-                                className="filter-light-green"
-                            />
-                        </IconButton>
+                        {/* header search */}
+                        <HeaderSearch />
+
                         <IconButton className="relative hidden md:flex">
                             <Image
                                 src={notificationIcon}

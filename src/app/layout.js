@@ -21,6 +21,7 @@ export const metadata = {
 
 // context
 import { ActiveProvider } from "@/context/ActiveContext.js";
+import { DialogProvider } from "@/context/DialogContext.js";
 
 // toastify container
 import { ToastContainer } from "react-toastify";
@@ -30,10 +31,12 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={`${manrope.className}`}>
                 <ActiveProvider>
-                    <Layout>
-                        {children} 
-                        <ToastContainer />
-                    </Layout>
+                    <DialogProvider>
+                        <Layout>
+                            {children}
+                            <ToastContainer />
+                        </Layout>
+                    </DialogProvider>
                 </ActiveProvider>
             </body>
         </html>
