@@ -7,7 +7,7 @@ import ShortingIcon from "@/images/components/shorting-button/icon/shorting-icon
 export default function ShortingButton({ children }) {
      return (
           <button className="px-8 -ms-6 uppercase py-6 flex items-center justify-center gap-[0.5625rem] bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-[5px]">
-               {children}{" "}
+               {children}
                <Image
                     src={ShortingIcon}
                     height={16}

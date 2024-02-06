@@ -46,7 +46,7 @@ export const AuthenticationBox = ({
 
                     {/* description */}
                     <div className="mx-auto w-full max-w-[202px]">
-                        <p className="text-admin text-sm normal-case font-normal">
+                        <p className="text-admin text-sm normal-case font-normal dark:text-neutral-400">
                             {description}
                         </p>
                     </div>

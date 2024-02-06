@@ -8,7 +8,6 @@ import Image from "next/image";
 import EyesOpenIcon from "@/images/components/form-fields/inputs/password/eyes-open.svg";
 import EyesCloseIcon from "@/images/components/form-fields/inputs/password/eyes-close.svg";
 
-
 // components
 import IconButton from "@/components/global/theme-buttons/icon-button";
 
@@ -21,6 +20,9 @@ export const InputField = ({
     placeholder,
     type,
     value,
+    error,
+    onChange,
+    onBlur,
 }) => {
     // eyes open and close logic
     const [eyesOpen, setEyesOpen] = useState(false);
@@ -29,7 +31,7 @@ export const InputField = ({
         <>
             <div className="mb-16 last:mb-0">
                 <label
-                    className="uppercase text-admin font-semibold text-button mb-8 block"
+                    className="uppercase text-admin font-semibold text-button mb-8 block dark:text-neutral-400"
                     htmlFor={name}>
                     {label}
                 </label>
@@ -44,10 +46,16 @@ export const InputField = ({
                                 : type
                         }
                         placeholder={placeholder}
-                        className={`${className}  block w-full bg-light border-2 border-primary-lightest py-13 px-16 rounded-vsm text-sm text-admin font-normal focus:outline-none focus:border-primary invalid:border-danger invalid:text-danger focus:invalid:border-danger focus:invalid:ring-danger`}
+                        className={`${className}  block w-full bg-light dark:bg-neutral-800 dark:border-neutral-700 border-2  py-13 px-16 rounded-vsm text-sm text-admin dark:text-neutral-400 font-normal focus:outline-none focus:border-primary  ${
+                            error === null
+                                ? "focus:border-primary border-primary-lightest"
+                                : "focus:border-danger border-danger"
+                        } `}
                         name={name}
                         id={id}
                         value={value}
+                        onChange={onChange}
+                        onBlur={onBlur}
                     />
 
                     {/* password hide and show button */}
@@ -75,6 +83,13 @@ export const InputField = ({
                         </>
                     )}
                 </div>
+
+                {/* error */}
+                {error === null ? null : (
+                    <p className="text-danger text-button mt-8 font-semibold">
+                        {error}
+                    </p>
+                )}
             </div>
         </>
     );

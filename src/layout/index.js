@@ -12,7 +12,7 @@ const Layout = ({ children, className }) => {
 
     return (
         <main className={` ${className} bg-background dark:bg-neutral-800`}>
-            {pathName === "/" || pathName === "/sign-up" ? (
+            {pathName === "/auth/sign-up" || pathName === "/auth/sign-in" ? (
                 <>{children}</>
             ) : (
                 <>

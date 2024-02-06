@@ -136,7 +136,7 @@ function Sidebar() {
                                 {/* advertise title */}
                                 <div className="mb-[8rem] relative z-[2]">
                                     <h5 className="text-3xl font-bold text-white capitalize ">
-                                        Improve Your Sales Efficiency{" "}
+                                        Improve Your Sales Efficiency
                                     </h5>
                                 </div>
 

@@ -51,7 +51,7 @@ function SalesInfo() {
                             <H5Title>Sales by Category</H5Title>
 
                             {/* options */}
-                            <div className="w-[105px]">
+                             <div className="w-[105px]">
                                 <Select>
                                     <Option value="Year">Year</Option>
                                     <Option value="Month">Month</Option>

@@ -1,28 +1,31 @@
 {
-	"compilerOptions": {
-		"paths": {
-			"@/*": ["./src/*"],
+    "compilerOptions": {
+        "paths": {
+            "@/*": ["./src/*"],
 
-			// images
-			"@/images/*": ["./public/images/*"],
+            // images
+            "@/images/*": ["./public/images/*"],
 
-			// layout
-			"@/layout/*": ["./src/layout/*"],
+            // layout
+            "@/layout/*": ["./src/layout/*"],
 
-			// pages
-			"@/pages/*": ["./src/app/*"],
+            // pages
+            "@/pages/*": ["./src/app/*"],
 
-			// components
-			"@/components/*": ["./src/components/*"],
+            // components
+            "@/components/*": ["./src/components/*"],
 
-			// styles
-			"@/styles/*": ["./src/styles/*"],
+            // styles
+            "@/styles/*": ["./src/styles/*"],
 
-			// data
-			"@/data/*": ["./src/data/*"],
+            // data
+            "@/data/*": ["./src/data/*"],
 
-			// context
-			"@/context/*" : ["./src/context/*"]
-		}
-	}
+            // context
+            "@/context/*": ["./src/context/*"],
+
+            // validation
+            "@/schemas/*": ["./src/schemas/*"],
+        },
+    },
 }
