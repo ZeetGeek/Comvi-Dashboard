@@ -10,7 +10,7 @@ import Button from "@/components/global/theme-buttons/button";
 import IconButton from "@/components/global/theme-buttons/icon-button";
 
 // images
-import logoIcon from "@/images/logo/logo-icon.svg";
+import logoIcon from "@/images/logo/Logo-icon.svg";
 import advertiseImage from "@/images/components/sidebar/advertise-image.png";
 import closeIcon from "@/images/components/sidebar/close.svg";
 
