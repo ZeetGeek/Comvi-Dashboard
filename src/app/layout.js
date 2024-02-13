@@ -2,6 +2,7 @@
 import { Manrope } from "next/font/google";
 import "../styles/globals.scss";
 import "../styles/dark-mode.scss";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // layout
 import Layout from "@/layout";
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
                         <ToastContainer />
                     </Layout>
                 </ActiveProvider>
+                <SpeedInsights />
             </body>
         </html>
     );

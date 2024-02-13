@@ -1,6 +1,6 @@
 // components
 import DashboardInfo from "@/components/page-specific/dashboard/2/dashboard-info";
-import SalesAnalyticsComponent from "@/components/page-specific/dashboard/2/sales-analytics";
+import SalesAnalytics from "@/components/page-specific/dashboard/2/sales-analytics";
 import BestSellingProduct from "@/components/page-specific/dashboard/2/best-selling-product";
 import TotalTransactions from "@/components/page-specific/dashboard/2/total-transactions";
 import ProductReview from "@/components/page-specific/dashboard/2/product-review";
@@ -17,7 +17,7 @@ export default function DashboardTwo() {
                         <div className="w-full">
                             <div className="flex flex-col gap-32">
                                 <DashboardInfo />
-                                <SalesAnalyticsComponent />
+                                <SalesAnalytics />
                             </div>
                         </div>
 
