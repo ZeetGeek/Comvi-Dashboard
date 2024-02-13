@@ -2,12 +2,7 @@
 module.exports = {
     darkMode: "class",
 
-    content: [
-        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
-    ],
+    content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}", "./src/layout/**/*.{js,ts,jsx,tsx,mdx}"],
     theme: {
         extend: {
             // custom fonts family
@@ -32,8 +27,7 @@ module.exports = {
                 button: [
                     "clamp(0.875rem, 0.8625rem + 0.0625vw, 0.9375rem)",
                     {
-                        lineHeight:
-                            "clamp(0.78125rem, 0.6875rem + 0.4688vw, 1.25rem)",
+                        lineHeight: "clamp(0.78125rem, 0.6875rem + 0.4688vw, 1.25rem)",
                     },
                 ],
             },
@@ -79,7 +73,7 @@ module.exports = {
                 8: "clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem)",
                 10: "clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem)",
                 18: "clamp(1rem, 0.975rem + 0.125vw, 1.125rem)",
-                12: "clamp(3.5rem, 4.05rem   + -2.75vw, 0.75rem)",
+                12: "clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem)",
                 13: "clamp(0.40625rem, 0.325rem + 0.4063vw, 0.8125rem)",
                 14: "clamp(0.4375rem, 0.35rem + 0.4375vw, 0.875rem)",
                 15: "clamp(0.46875rem, 0.375rem + 0.4688vw, 0.9375rem)",
@@ -102,8 +96,7 @@ module.exports = {
 
             // background gradient colors and images
             backgroundImage: {
-                "slider-add-bg":
-                    "linear-gradient(136deg, rgba(255, 255, 255, 0.00) -10.41%, rgba(29, 139, 139, 0.93) 56.42%, rgba(255, 255, 255, 0.11) 116.95%)",
+                "slider-add-bg": "linear-gradient(136deg, rgba(255, 255, 255, 0.00) -10.41%, rgba(29, 139, 139, 0.93) 56.42%, rgba(255, 255, 255, 0.11) 116.95%)",
             },
 
             // box shadows

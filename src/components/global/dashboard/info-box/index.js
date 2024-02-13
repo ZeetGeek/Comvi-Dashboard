@@ -14,7 +14,7 @@ import DecrementIcon from "@/images/components/dashboard/1/icons/decrement.svg";
 function InfoBox({ title, title_icon, price, chart_data, parentage }) {
     return (
         <>
-            <LayoutBox className="px-24 shadow-layout-box py-28 ">
+            <LayoutBox className="px-24 shadow-layout-box py-28 w-full ">
                 <div>
                     {/* title and icon */}
                     <div className="flex items-center gap-8">

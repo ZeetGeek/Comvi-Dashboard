@@ -1,36 +1,52 @@
-import DialogBody from "@/components/global/dialog/dialog-body";
-import DialogHead from "@/components/global/dialog/dialog-head";
+// components
+import DashboardInfo from "@/components/page-specific/dashboard/2/dashboard-info";
+import SalesAnalytics from "@/components/page-specific/dashboard/2/sales-analytics";
+import BestSellingProduct from "@/components/page-specific/dashboard/2/best-selling-product";
+import TotalTransactions from "@/components/page-specific/dashboard/2/total-transactions";
+import ProductReview from "@/components/page-specific/dashboard/2/product-review";
+import OrderStatus from "@/components/page-specific/dashboard/2/order-status";
+import VisitByTime from "@/components/page-specific/dashboard/2/visit-by-time";
 
-function DashboardTwo() {
+export default function DashboardTwo() {
     return (
         <>
-            <div className="container mx-auto h-screen">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <DialogHead>Click me</DialogHead>
-                    <DialogBody>
-                        <p className="bg-blue-200 p-5">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Repellat quia possimus tempora magni? Est
-                            magni quis dignissimos. Odit obcaecati nihil
-                            suscipit officiis omnis sunt hic a ipsa. Maiores
-                            velit esse quo atque ab provident, neque sunt
-                            ducimus hic recusandae commodi ad, dignissimos,
-                            facilis laudantium repellat error. Voluptate
-                            veritatis magni inventore possimus consequuntur
-                            harum nihil dignissimos autem similique corrupti
-                            totam atque laudantium odit voluptatibus cum rem
-                            sint, corporis dolores iure animi. Quibusdam
-                            voluptate numquam, eveniet laborum cupiditate nulla
-                            aspernatur voluptas, sint aut accusamus similique
-                            deserunt, maxime dolores obcaecati ad fuga
-                            reprehenderit quod iste labore ex quas laboriosam?
-                            Esse ipsa sint consequuntur.
-                        </p>
-                    </DialogBody>
+            {/* dashboard info and sales analytics */}
+            <section className="dashboard-info-sales-analytics">
+                <div className="container">
+                    <div className="flex flex-col xl:flex-row gap-32">
+                        <div className="w-full">
+                            <div className="flex flex-col gap-32">
+                                <DashboardInfo />
+                                <SalesAnalytics/>
+                            </div>
+                        </div>
+
+                        {/* best selling product and total transactions */}
+                        <div className="w-full">
+                            <div className="flex flex-col gap-32">
+                                <BestSellingProduct />
+                                <TotalTransactions />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+            {/* product review, order status, visitor by time */}
+            <section className="product-review-order-status-visitors">
+                <div className="container">
+                    <div className="grid gap-32 md:grid-cols-2 2xl:grid-cols-3 mt-32">
+                        <div>
+                            <ProductReview />
+                        </div>
+                        <div>
+                            <OrderStatus />
+                        </div>
+                        <div className="col-span-1 md:col-span-2 2xl:col-span-1">
+                            <VisitByTime />
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
-
-export default DashboardTwo;

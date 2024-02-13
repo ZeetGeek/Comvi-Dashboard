@@ -46,11 +46,7 @@ export const InputField = ({
                                 : type
                         }
                         placeholder={placeholder}
-                        className={`${className}  block w-full bg-light dark:bg-neutral-800 dark:border-neutral-700 border-2  py-13 px-16 rounded-vsm text-sm text-admin dark:text-neutral-400 font-normal focus:outline-none focus:border-primary  ${
-                            error === null
-                                ? "focus:border-primary border-primary-lightest"
-                                : "focus:border-danger border-danger"
-                        } `}
+                        className={`${className}  block w-full bg-light dark:bg-neutral-800 dark:border-neutral-700 border-2  py-13 px-16 rounded-vsm text-sm text-admin dark:text-neutral-400 font-normal focus:outline-none focus:border-primary border-primary-lightest `}
                         name={name}
                         id={id}
                         value={value}

@@ -14,14 +14,14 @@ function Button({ children, size, color, className, name, gap, type }) {
                                : "py-6 px-20"
                  } ${
                      color === "default"
-                         ? "bg-light border-[1px] border-primary-lightest hover:bg-neutral-100 text-admin dark:bg-neutral-700 dark:text-white dark:border-transparent dark:hover:bg-neutral-800"
+                         ? "bg-light border border-primary-lightest hover:bg-neutral-100 text-admin dark:bg-neutral-700 dark:text-white dark:border-transparent dark:hover:bg-neutral-800"
                          : color === "primary"
                            ? "bg-primary hover:bg-secondary text-white dark:bg-primary-light dark:hover:bg-primary-light/80"
                            : color === "secondary"
                              ? "bg-secondary hover:bg-primary text-white"
                              : color === "warning"
                                ? "bg-warning hover:bg-light text-dark"
-                               : "bg-light border-[1px] border-primary-lightest hover:bg-neutral-100 text-admin dark:bg-neutral-700 dark:text-white dark:border-transparent dark:hover:bg-neutral-800"
+                               : "bg-light border border-primary-lightest hover:bg-neutral-100 text-admin dark:bg-neutral-700 dark:text-white dark:border-transparent dark:hover:bg-neutral-800"
                  } rounded-vsm text-button duration-300 flex text-center justify-center font-semibold gap-${gap} flex items-center justify-center `}
                  name={name}
                  type={type}>

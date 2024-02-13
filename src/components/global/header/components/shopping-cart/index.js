@@ -5,22 +5,20 @@ import Image from "next/image";
 import IconButton from "@/components/global/theme-buttons/icon-button";
 
 // images
-import SearchIcon from "@/images/components/header/icons/search.svg";
+import cartIcon from "@/images/components/header/icons/cart.svg";
 
-function HeaderSearch() {
+export default function ShoppingCart() {
     return (
         <>
             <IconButton>
                 <Image
-                    src={SearchIcon}
-                    width={22}
-                    height={22}
-                    alt="Search Icon"
+                    src={cartIcon}
+                    height={20}
+                    width={24}
+                    alt="Cart Icon"
                     className="filter-light-green"
                 />
             </IconButton>
         </>
     );
 }
-
-export default HeaderSearch;

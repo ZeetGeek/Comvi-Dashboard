@@ -1,3 +1,4 @@
+// dependencies
 import { Manrope } from "next/font/google";
 import "../styles/globals.scss";
 import "../styles/dark-mode.scss";
@@ -15,13 +16,11 @@ const manrope = Manrope({
 
 export const metadata = {
     title: "Comvi - Your Ultimate E-commerce Management Dashboard",
-    description:
-        "Comvi: Your all-in-one e-commerce management solution. Simplify inventory, analyze sales, and enhance customer experience. Take control today.",
+    description: "Comvi: Your all-in-one e-commerce management solution. Simplify inventory, analyze sales, and enhance customer experience. Take control today.",
 };
 
 // context
 import { ActiveProvider } from "@/context/ActiveContext.js";
-import { DialogProvider } from "@/context/DialogContext.js";
 
 // toastify container
 import { ToastContainer } from "react-toastify";
@@ -29,14 +28,12 @@ import { ToastContainer } from "react-toastify";
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${manrope.className}`}>
+            <body className={`${manrope.className} font-manrope`}>
                 <ActiveProvider>
-                    <DialogProvider>
-                        <Layout>
-                            {children}
-                            <ToastContainer />
-                        </Layout>
-                    </DialogProvider>
+                    <Layout>
+                        {children}
+                        <ToastContainer />
+                    </Layout>
                 </ActiveProvider>
             </body>
         </html>

@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 // components
 import Sidebar from "@/components/global/sidebar";
 import Header from "@/components/global/header";
+import CartSidebar from "@/components/global/cart-sidebar";
 
 // context
 import { ActiveContext } from "@/context/ActiveContext.js";
@@ -37,8 +38,11 @@ const Layout = ({ children, className }) => {
                             className={`flex-grow flex flex-col ps-0 lg:ps-32 py-0 lg:py-18 ${isActive ? "w-full lg:w-[75%] xl:w-[80%] 2xl:w-[84.1%]" : "w-full lg:w-[92%] xl:w-[90%] 2xl:w-[95.7%]"} `}>
                             {/* Header */}
                             <Header />
-                            {children}
+                            <div className="pt-18">{children}</div>
                         </div>
+
+                        {/* cart sidebar */}
+                        <aside>{/* <CartSidebar /> */}</aside>
                     </div>
                 </>
             )}

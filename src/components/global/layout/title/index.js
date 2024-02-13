@@ -1,10 +1,10 @@
 // h3 title
 export const H3Title = ({ children, className }) => {
     return (
-        <h4
+        <h3
             className={` ${className} text-display-1 capitalize font-bold text-dark  `}>
             {children}
-        </h4>
+        </h3>
     );
 };
 

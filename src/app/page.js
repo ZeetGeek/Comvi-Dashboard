@@ -8,7 +8,7 @@ export default function DashboardOne() {
         <>
             {/* dashboard info */}
             <section id="dashboard-info">
-                <div className="mb-32 mt-18">
+                <div className="mb-32">
                     <DashboardInfo />
                 </div>
             </section>
@@ -21,9 +21,7 @@ export default function DashboardOne() {
             </section>
 
             <section id="product-info">
-                <div>
-                    <ProductInfo />
-                </div>
+                <ProductInfo />
             </section>
         </>
     );

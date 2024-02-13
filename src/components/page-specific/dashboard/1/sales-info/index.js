@@ -37,7 +37,7 @@ function SalesInfo() {
 
                         {/* chart */}
                         <div className="mt-[1.375rem]">
-                            <SalesLineChart />
+                            <SalesLineChart height={290} />
                         </div>
                     </LayoutBox>
                 </div>

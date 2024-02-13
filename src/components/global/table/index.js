@@ -1,5 +1,5 @@
 export const Table = ({ children, className }) => (
-    <div className="overflow-x-auto rounded-sm border-[1px] border-primary-lightest dark:border-neutral-700">
+    <div className="overflow-x-auto rounded-sm border border-primary-lightest dark:border-neutral-700">
         <table className={` ${className} w-full`}>
             {children}
         </table>

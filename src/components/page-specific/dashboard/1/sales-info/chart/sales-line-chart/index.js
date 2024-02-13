@@ -8,7 +8,7 @@ import {
      Tooltip,
 } from "recharts";
 
-function SalesLineChart() {
+function SalesLineChart({height}) {
      const data = [
           { name: "2017", uv: 4000, pv: 2400, amt: 2400 },
           { name: "2018", uv: 3000, pv: 1398, amt: 2210 },
@@ -30,7 +30,7 @@ function SalesLineChart() {
      return (
           <>
                <div style={{ width: "100%" }}>
-                    <ResponsiveContainer width="100%" height={290}>
+                    <ResponsiveContainer width="100%" height={height}>
                          <AreaChart
                               width={500}
                               height={200}
