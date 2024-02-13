@@ -6,8 +6,6 @@ import { H5Title } from "@/components/global/layout/title";
 import Select from "@/components/global/form-fields/select-option/select";
 import Option from "@/components/global/form-fields/select-option/option";
 
-
-
 // chart
 import SalesLineChart from "@/components/page-specific/dashboard/1/sales-info/chart/sales-line-chart";
 
