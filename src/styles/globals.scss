@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import "~react-toastify/dist/ReactToastify.css";
-@import '~swiper/css';
+@import "~swiper/css";
 
 * {
     margin: 0;
@@ -47,9 +47,15 @@ body::-webkit-scrollbar {
     }
 }
 
-// swiper 
+// swiper
 
 .swiper {
     max-width: 808px;
     width: 100%;
+}
+
+thead {
+    & > tr {
+        box-shadow: 1px 1px 1px rgb(235 240 237 / 1);
+    }
 }

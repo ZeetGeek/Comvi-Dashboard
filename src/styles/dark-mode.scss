@@ -1,12 +1,10 @@
 .dark {
     .filter-white {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
-            saturate(7466%) hue-rotate(273deg) brightness(100%) contrast(102%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7466%) hue-rotate(273deg) brightness(100%) contrast(102%);
     }
 
     .filter-light-green {
-        filter: brightness(0) saturate(100%) invert(67%) sepia(63%)
-            saturate(3655%) hue-rotate(131deg) brightness(104%) contrast(84%);
+        filter: brightness(0) saturate(100%) invert(67%) sepia(63%) saturate(3655%) hue-rotate(131deg) brightness(104%) contrast(84%);
     }
 
     .slider-dark-border {
@@ -32,4 +30,10 @@
     .product_bg_image_gl {
         background-color: #15cab8;
     }
+
+   thead {
+    & > tr {
+        box-shadow: 1px 1px 1px rgb(64 64 64 / 1);
+    }
+}
 }

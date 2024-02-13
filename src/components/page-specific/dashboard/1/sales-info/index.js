@@ -1,5 +1,8 @@
 "use client";
 
+// dependencies
+import dynamic from "next/dynamic";
+
 // components
 import { LayoutBox } from "@/components/global/layout/boxes";
 import { H5Title } from "@/components/global/layout/title";
@@ -8,10 +11,13 @@ import Option from "@/components/global/form-fields/select-option/option";
 import CategoryInfo from "./components/category-info";
 
 import SalesLineChart from "./chart/sales-line-chart";
-import SalesCategoryChart from "./chart/sales-pie-chart";
 
 // data
 import { category_info } from "@/data/dashboard/1";
+
+// chart
+// import SalesCategoryChart from "./chart/sales-pie-chart";
+const SalesCategoryChart = dynamic(() => import("./chart/sales-pie-chart"), { ssr: false });
 
 function SalesInfo() {
     return (
@@ -51,7 +57,7 @@ function SalesInfo() {
                             <H5Title>Sales by Category</H5Title>
 
                             {/* options */}
-                             <div className="w-[105px]">
+                            <div className="w-[105px]">
                                 <Select>
                                     <Option value="Year">Year</Option>
                                     <Option value="Month">Month</Option>
@@ -66,9 +72,7 @@ function SalesInfo() {
                                     <SalesCategoryChart />
 
                                     <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                                        <h3 className="font-extrabold text-dark text-display-1 dark:text-white">
-                                            $6,8K
-                                        </h3>
+                                        <h3 className="font-extrabold text-dark text-display-1 dark:text-white">$6,8K</h3>
                                     </div>
                                 </div>
                             </div>
