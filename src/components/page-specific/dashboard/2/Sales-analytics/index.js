@@ -9,7 +9,7 @@ import Option from "@/components/global/form-fields/select-option/option";
 // chart
 import SalesLineChart from "@/components/page-specific/dashboard/1/sales-info/chart/sales-line-chart";
 
-function SalesAnalytics() {
+function SalesAnalyticsComponent() {
     return (
         <LayoutBox className="p-24 h-full">
             {/* title and options */}
@@ -35,4 +35,4 @@ function SalesAnalytics() {
     );
 }
 
-export default SalesAnalytics;
+export default SalesAnalyticsComponent;
